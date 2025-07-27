@@ -1,39 +1,30 @@
-.profile-section {
-    @apply bg-white py-12;
+/* Load Sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.profileSection {
+    @apply bg-white py-12 font-[Inter];
 }
 
-.profile-section_container {
-    @apply container mx-auto flex flex-col lg:flex-row items-center;
+.container {
+    @apply max-w-6xl mx-auto flex flex-col lg:flex-row items-center  px-6;
 }
 
-.profile-section-centred {
-    @apply flex justify-center items-center;
+.imageWrapper {
+    @apply flex-1;
 }
 
-.profile-section_image-wrapper {
-   @apply flex-1 mb-6 lg:mb-0; 
+.image {
+    @apply w-full max-w-sm rounded-2xl shadow-lg object-cover;
 }
 
-.profile-section_image {
-   @apply rounded-lg shadow-lg w-full max-w-sm mx-auto; 
+.textWrapper {
+    @apply flex-1;
 }
 
-.profile-section_content {
-    @apply flex-1 lg:pl-10;
+.title {
+    @apply text-3xl font-semibold mb-4;
 }
 
-.profile-section-content-left {
-    @apply lg:order-1;
-}
-
-.profile-section_title {
-    @apply text-4xl font-semibold mb-3;
-}
-
-.profile-section-image-right {
-    @apply lg:order-2;
-}
-
-.profile-section_paragraph {
-    @apply text-base leading-snug mb-3;
+.paragraph {
+    @apply text-base leading-relaxed space-y-1 max-w-prose;
 }
