@@ -65,3 +65,9 @@
     border: none;
     box-shadow: 0 4px 10px rgba(0,0,0, 0.05);
 }
+
+@media (max-width: 778px) {
+    .videoGrid {
+        grid-template-columns: 1fr;
+    }
+}
