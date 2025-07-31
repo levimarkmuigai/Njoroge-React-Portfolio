@@ -44,3 +44,24 @@
     font-size: 0.95rem;
     color: #4b5563;
 }
+
+
+.videoWrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.videoGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.05);
+}

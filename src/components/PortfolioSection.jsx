@@ -42,18 +42,20 @@ export default function PortfolioSection() {
                     </div>
                 ))}
             </div>
-            <div className={styles.videoGrid}>
-                {youtubeVideos.map((video, index)  => (
-                    <iframe
-                        key={index}
-                        className={styles.video}
-                        src={`https://www.youtube.com/embed/${video.id}`}
-                        title={video.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                ))}
+            <div className={styles.videoWrapper}>
+                <div className={styles.videoGrid}>
+                    {youtubeVideos.map((video, index)  => (
+                        <iframe
+                            key={index}
+                            className={styles.video}
+                            src={`https://www.youtube.com/embed/${video.id}`}
+                            title={video.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    ))}
+                </div>
             </div>
         </section>
     )
