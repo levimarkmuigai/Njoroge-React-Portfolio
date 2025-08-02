@@ -67,33 +67,33 @@ export default  function ClienteleSection() {
                 >
                    ⟵ 
                 </button>
-            </div>
 
-            {/*Card: Single client shown*/}
-            <div className={styles.cardWrapper}>
-                <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.card}
-                >
+                {/*Card: Single client shown*/}
+                <div className={styles.cardWrapper}>
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.card}
+                    >
                 
-                    {/* Logo linked as image */}
-                    <div className={styles.logoContainer}>
-                        <img
-                            src={logo}
-                            alt={`${name} logo`}
-                            className={styles.logo}
-                        />
-                    </div>
+                        {/* Logo linked as image */}
+                        <div className={styles.logoContainer}>
+                            <img
+                                src={logo}
+                                alt={`${name} logo`}
+                                className={styles.logo}
+                            />
+                        </div>
 
-                    {/* Role Description*/}
-                    <div className={styles.info}>
-                        <h3 className={styles.clientName}>{name}</h3>
-                        <p className={styles.clientRole}>{role}</p>
-                        <span className={styles.cta}>View Work </span>
-                    </div>
-                </a>
+                        {/* Role Description*/}
+                        <div className={styles.info}>
+                            <h3 className={styles.clientName}>{name}</h3>
+                            <p className={styles.clientRole}>{role}</p>
+                            <span className={styles.cta}>View Work </span>
+                        </div>
+                    </a>
+                </div>
                 
                 {/* Next Button*/}
                 <button
@@ -103,6 +103,7 @@ export default  function ClienteleSection() {
                 >
                     ⟶
                 </button>
+
             </div>
             
             {/* Indicators*/}
