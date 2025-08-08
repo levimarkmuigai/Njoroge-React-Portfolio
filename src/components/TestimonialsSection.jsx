@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from '../styles/TestimonialSection.module.css'
 
 const testimonials = [
     {
@@ -22,61 +21,53 @@ const testimonials = [
   },
 ];
 
+// Auto-slide interval in miliseconds
 const AUTO_ADVANCE_MS = 7000;
 
-export default function TestimonialsSection() {
+export default function TestimonialSection() {
+
+    // Store current testimonial being displayed.
     const [current, setCurrent] = useState(0);
+
+    // Stores total testimonials
     const count = testimonials.length;
+
+    // We use ref so the timer persists between renders
     const timerRef = useRef(null);
 
-    const next = () => setCurrent((c) => (c + 1) % count);
-    
-    const prev = () => setCurrent((c) => (c - 1 + count) % count);
+    // Go to next testimonial (Loops to 0 when at the end.)
+    const next = () => setCurrent((c) => (c+1) % count);
 
-    useEffect(() => {
-        startAuto();
-        return stopAuto;
-    }, []);
+    // Go to previous testimonial (Loops to last when at index 0.)
+    const prev = () => setCurrent((c) => (c+1) % count);
 
+    // Start the auto-sliding
     const startAuto = () => {
-        stopAuto();
+        stopAuto(); // Clears any existing timer before starting a new one.
         timerRef.current = setInterval(next, AUTO_ADVANCE_MS);
     };
 
+    // Stops Auto-sliding(Used on hover.)
     const stopAuto = () => {
         if(timerRef.current) clearInterval(timerRef.current);
     };
 
+    // Starts auto-sliding when component mounts
+    useEffect(() => {
+        startAuto();
+        return stopAuto; // Clean up when unmounting
+
+    }, []);
+
+    // Keyboard navigation listener
     useEffect(() => {
         const onKey = (e) => {
-            if (e.key === 'ArrowRight') next();
-            if (e.key === 'ArrowLeft') prev();
+            if(e.key === "ArrowRight") next();
+            if(e.key === "ArrowLeft") prev();
         };
 
-        window.addEventListener('keydown', onKey);
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, []);
 
-        return () => window.removeEventListener('keydown', onKey);
-        }, [count]);
-
-
-    return (
-        <section className={styles.section} aria-label="Client testimonials">
-           <h2 className={styles.heading}>What Clients Say</h2>
-            
-            <div
-                className={styles.carousel}
-                onMouseEnter={stopAuto}
-                onMouseLeave={startAuto}
-            >
-                <button
-                    aria-label="Previous Testimonial"
-                    className={styles.navButton}
-                    onClick={prev}
-                >
-                    ⟵
-                </button>
-            </div> 
-        </section>
-    );
 }
-
