@@ -52,3 +52,4 @@ const HeroSection = React.memo(function HeroSection() {
 });
 
 export default HeroSection;
+
