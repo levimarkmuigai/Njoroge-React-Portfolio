@@ -1,29 +1,28 @@
 import React from 'react';
-import styles from '../styles/ProfileSection.module.css';
 import clientPhoto from '../assets/client-photo.jpg';
 
 // ProfileSection: 
 export default function ProfileSection() {
     return(
-        <section id="profile" className={styles.profileSection}>
-            <div className={styles.container}>
+        <section id="profile" className="bg-white py-12">
+            <div className= "max-w-6xl mx-auto flex flex-col lg:flex-row items-center  px-6;">
                 
                 {/* === Image side === */}
-                <div className={styles.imageWrapper}>
+                <div className=" flex-1">
                     <img
                         src = {clientPhoto}
                         alt = "Potrait of Njoroge Muigai"
-                        className = {styles.image}
+                        className = "w-full max-w-sm rounded-2xl shadow-lg object-cover"
                     />
                 </div>
 
                 {/* === Text Side === */}
-                <div className={styles.textWrapper}>
+                <div className= "flex-1">
                     {/* Professinal Title*/}
-                    <h2 className={styles.title}>Senior Journalist - BBC</h2>
+                    <h2 className="text-3xl font-semibold mb-4">Senior Journalist - BBC</h2>
 
                     {/*Summmary Paragraph*/}
-                    <p className={styles.paragraph}>
+                    <p className= "text-base leading-relaxed space-y-1 max-w-prose">
                         I tell African stories. <br />
                         My work spans 10 years. <br />
                         I led big campaigns. <br />
