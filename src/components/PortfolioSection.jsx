@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styles from '../styles/PortfolioSection.module.css'
-
 const companies = [
     {
         name: 'NTV',
@@ -30,29 +28,34 @@ const youtubeVideos  = [
 
 export default function PortfolioSection() {
     return(
-            <section className={styles.section}>
-            <h2 className={styles.heading}> My Portfolio </h2>
+            <section className="p-4x py-16 text-center bg-white">
+            <h2 className="text-2xl font-bold mb-8 text-gray-900"> My Portfolio </h2>
 
-            <div className={styles.cardContainer}>
+            <div className="flex flex-wrap justify-center gap-8 max-w-xl mx-auto">
                 {companies.map(({ name, contributions}, index) => 
                 (
-                    <div key={index} className={styles.card}>
-                        <h3 className={styles.company}>{name}</h3>
-                        <p className={styles.role}>{contributions}</p>
+                    <div key={index} className="
+                    bg-gray-50 rounded-2xl p-8 w-[250px] 
+                    shadow-md transition-transform 
+                    duration-200 ease-in-out hover:scale-105
+                    ">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
+                        <p className="text-sm text-gray-600">{contributions}</p>
                     </div>
                 ))}
             </div>
-            <div className={styles.videoWrapper}>
-                <div className={styles.videoGrid}>
+            <div className="max-w-5xl mx-auto mt-8">
+                <div className="grid gird-cols-1 md:grid-cols-3 gap-6 justify-center">
                     {youtubeVideos.map((video, index)  => (
                         <iframe
                             key={index}
-                            className={styles.video}
+                            className="w-full aspect-video rounded-2xl border-0 shadow-md"
                             src={`https://www.youtube.com/embed/${video.id}`}
                             title={video.title}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
+                            loading="lazy"
                         ></iframe>
                     ))}
                 </div>
