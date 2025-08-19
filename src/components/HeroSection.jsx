@@ -18,7 +18,7 @@ const HeroSection = React.memo(function HeroSection() {
             Njoroge Muigai
           </h1>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-xl">
-            Crafting bold digital marketing narratives that connect hearts and minds—one click at a time.
+            Crafting bold digital marketing narratives that connect hearts and minds one click at a time.
           </p>
         </div>
 
