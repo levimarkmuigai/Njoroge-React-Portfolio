@@ -37,7 +37,7 @@ export default function TesimonialSection() {
         </h2>
 
         {/* Grid Wrapper - responsive, 3 columns max */}
-        <div className="grid grid-cols-1 am:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+        <div className="grid grid-cols-1 am:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
             {testimonials.map((item, index) => (
               <motion.div
                 key={index}
