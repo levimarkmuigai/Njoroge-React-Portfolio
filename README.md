@@ -4,7 +4,7 @@ This is the personal portfolio website of **Njoroge Muigai**, a Senior Journalis
 
 Deployed on [Vercel](https://vercel.com/) for fast, serverless hosting.
 
-## 🔗 Live Demo: [Visit the live site](https://njoroge-react-portfolio.vercel.app/)
+## 🔗 Live Demo: [Visit the live site](https://njorogemuigaiporfolio.vercel.app/)
 
 ## 📦 Project Structure
 
