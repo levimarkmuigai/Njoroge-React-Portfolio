@@ -5,17 +5,18 @@ import ServiceSection from './components/ServiceSection';
 import PortfolioSection from './components/PortfolioSection'
 import ClienteleSection from './components/ClienteleSection';
 import TestimonialsSection from './components/TestimonialsSection';
-
+import GallerySection from './components/GallerySection';
 function App() {
 
   return (
     <>
-      <HeroSection/> 
+      <HeroSection/>
       <ProfileSection/>
       <ServiceSection/>
       <PortfolioSection/>
       <ClienteleSection/>
       <TestimonialsSection/>
+      <GallerySection/>
     </>
   );
 }
