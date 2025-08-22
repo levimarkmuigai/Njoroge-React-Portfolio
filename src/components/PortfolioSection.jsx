@@ -44,38 +44,38 @@ const youtubeVideos = [
 // ---------------------------
 export default function PortfolioSection() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="portfolio" className="scroll-mt-20 bg-black text-white py-16">
       {/* Section Heading */}
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white drop-shadow-md">
         Portfolio
       </h2>
 
       {/* Portfolio Entries */}
-      <div className="flex flex-col gap-8 max-w-4xl mx-auto">
+      <div className="flex flex-col gap-12 max-w-4xl mx-auto">
         {portfolioItems.map((client, index) => (
           <div
             key={client.name}
             className={`flex flex-col md:flex-row gap-6 items-start ${
-              index < portfolioItems.length - 1 ? 'border-b border-gray-200 pb-8' : ''
+              index < portfolioItems.length - 1 ? 'border-b border-gray-700 pb-8' : ''
             }`}
           >
             {/* Left: Logo */}
             <img
               src={client.logo}
               alt={`${client.name} logo`}
-              className="w-24 h-24 object-contain flex-shrink-0"
+              className="w-24 h-24 object-contain flex-shrink-0 transition-transform duration-300 hover:scale-105"
               loading="lazy"
             />
 
             {/* Right: Text Block */}
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900">{client.name}</h3>
-              <p className="text-sm text-gray-600 mt-2">{client.role}</p>
+              <h3 className="text-xl font-semibold text-white">{client.name}</h3>
+              <p className="text-md text-gray-300 mt-2">{client.role}</p>
               <a
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 mt-2 inline-block hover:underline"
+                className="mt-4 inline-block px-6 py-2 border border-red-500 text-red-500 font-semibold rounded-lg hover:bg-red-500 hover:text-black transition-all duration-300 shadow-lg hover:shadow-red-500/50"
               >
                 View Work →
               </a>
@@ -84,11 +84,9 @@ export default function PortfolioSection() {
         ))}
       </div>
 
-      {/* ---------------------------
-          YouTube Videos Section
-      --------------------------- */}
+      {/* YouTube Videos Section */}
       <div className="mt-16 max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white drop-shadow-md">
           Videos
         </h2>
 
@@ -96,7 +94,7 @@ export default function PortfolioSection() {
           {youtubeVideos.map((video) => (
             <iframe
               key={video.id}
-              className="w-full aspect-video rounded-2xl border-0 shadow-md"
+              className="w-full aspect-video rounded-2xl border-0 shadow-md shadow-gray-800/30 transition-transform duration-300 hover:scale-[1.02]"
               src={`https://www.youtube.com/embed/${video.id}`}
               title={video.title}
               frameBorder="0"

@@ -20,11 +20,13 @@ const hoverColors = {
 
 export default function ContactSection() {
   return (
-    <footer aria-label="Contact" className="py-12 px-4 text-center bg-gray-50">
-      <h2 className="text-2xl font-bold mb-6">Reach Out</h2>
+    <footer id="contact" className="scroll-mt-20 bg-black text-white py-16 px-4" aria-label="Contact">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center drop-shadow-md">
+        Reach Out
+      </h2>
 
-      {/* Social icons row */}
-      <div className="flex justify-center gap-6 mb-8">
+      {/* Social icons grid for responsiveness */}
+      <div className="flex flex-wrap justify-center gap-8 mb-8">
         {socials.map(({ name, icon: Icon, href }) => (
           <a
             key={name}
@@ -32,19 +34,19 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={name}
-            className={`text-gray-700 transition-colors ${hoverColors[name]}`}
+            className={`text-gray-400 transition-colors duration-300 ${hoverColors[name]} hover:scale-110`}
           >
-            <Icon className="w-8 h-8" />
+            <Icon className="w-10 h-10 md:w-12 md:h-12" />
           </a>
         ))}
       </div>
 
       {/* Footer credits */}
-      <div className="text-sm text-gray-500 space-y-1">
+      <div className="text-sm md:text-base text-gray-500 space-y-1 text-center">
         <p>© 2025 Njoroge Muigai.</p>
         <p>All Rights Reserved.</p>
         <p className="mt-2">
-          Powered by <span className="font-semibold text-gray-700">Levi</span>
+          Powered by <span className="font-semibold text-gray-400">Levi</span>
         </p>
       </div>
     </footer>

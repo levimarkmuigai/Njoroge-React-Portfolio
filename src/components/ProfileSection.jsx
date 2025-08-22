@@ -1,42 +1,53 @@
 import React from 'react';
 import clientPhoto from '../assets/client-photo.jpg';
+import resumePDF from '../assets/client_resume.pdf';
 
-// ProfileSection: 
 export default function ProfileSection() {
-    return(
-        <section id="profile" className="bg-white py-12">
-            <div className= "max-w-6xl mx-auto flex flex-col lg:flex-row items-center  px-6;">
-                
-                {/* === Image side === */}
-                <div className=" flex-1">
-                    <img
-                        src = {clientPhoto}
-                        alt = "Potrait of Njoroge Muigai"
-                        className = "w-full max-w-sm rounded-2xl shadow-lg object-cover"
-                    />
-                </div>
+  return (
+    <section id="profile" className="relative py-16 sm:py-20 md:py-24 flex justify-center">
+      <div className="bg-gray-900/90 backdrop-blur-md rounded-3xl max-w-6xl w-full flex flex-col lg:flex-row items-center lg:items-start gap-12 p-8 md:p-12">
 
-                {/* === Text Side === */}
-                <div className= "flex-1">
-                    {/* Professinal Title*/}
-                    <h2 className="text-3xl font-semibold mb-4">Senior Journalist - BBC</h2>
+        {/* === Text & Image in One Card === */}
+        <div className="flex-1 flex flex-col lg:flex-row items-center lg:items-start gap-8">
 
-                    {/*Summmary Paragraph*/}
-                    <p className= "text-base leading-relaxed space-y-1 max-w-prose">
-                        I tell African stories. <br />
-                        My work spans 10 years. <br />
-                        I led big campaigns. <br />
-                        At BBC, I shaped news. <br />
-                        At NTV, I grew reach. <br />
-                        My work is impact-led. <br />
-                        I connect people daily. <br />
-                        I love what I do most. <br />
-                        I believe in truth. <br />
-                        I amplify real voices. <br />
-                        I lead with clarity. <br />
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
+          {/* Text */}
+          <div className="flex-1 text-center lg:text-left max-w-3xl lg:max-w-2xl">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Njoroge Muigai – Senior Journalist at BBC
+            </h1>
+            <p className="text-lg lg:text-xl leading-relaxed mb-8 text-gray-300">
+              I’m Njoroge Muigai. Over the past decade, I’ve dedicated my career to telling stories that matter across Africa. From shaping coverage at BBC to expanding reach at NTV, my work has always centered on impact, clarity, and truth. I craft narratives that connect people, amplify real voices, and shed light on the stories that often go unheard. Journalism isn’t just my profession—it’s my way of creating change and inspiring understanding. Every story I pursue is a step toward a more informed and engaged world.
+            </p>
+
+            {/* Resume Button */}
+            <a
+              href={resumePDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-block px-8 py-3
+                bg-black border border-red-500
+                text-white font-semibold
+                rounded-full
+                hover:scale-105
+                transition-all duration-300
+              "
+            >
+              View Resume
+            </a>
+          </div>
+
+          {/* Image */}
+          <div className="flex-1 flex justify-center lg:justify-end mt-6 lg:mt-0">
+            <img
+              src={clientPhoto}
+              alt="Portrait of Njoroge Muigai"
+              className="w-72 h-72 lg:w-96 lg:h-96 rounded-3xl object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
+
