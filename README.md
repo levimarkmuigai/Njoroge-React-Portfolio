@@ -1,12 +1,87 @@
-# React + Vite
+# Njoroge Muigai – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the personal portfolio website of **Njoroge Muigai**, a Senior Journalist at BBC, showcasing services, portfolio, testimonials, gallery, and contact information. The site features a modern, dark theme with a minimalist design optimized for readability and responsiveness.
 
-Currently, two official plugins are available:
+Deployed on [Vercel](https://vercel.com/) for fast, serverless hosting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo: [Visit the live site](https://njoroge-react-portfolio.vercel.app/)
 
-## Expanding the ESLint configuration
+## 📦 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```src/
+├─ assets/ # Images, logos, resume PDF
+├─ components/ # React components for each section
+│ ├─ Navbar.jsx
+│ ├─ ProfileSection.jsx
+│ ├─ ServiceSection.jsx
+│ ├─ PortfolioSection.jsx
+│ ├─ TestimonialsSection.jsx
+│ ├─ GallerySection.jsx
+│ └─ ContactSection.jsx
+├─ App.jsx # Main app layout
+└─ index.jsx # Entry point
+```
+
+## 💻 Features
+
+- **Responsive design**: Works across desktop, tablet, and mobile screens.
+- **Dark theme with subtle neon accents** for a modern look.
+- **Frosted glass cards** for profile and content sections.
+- **Interactive elements**:
+  - Hover effects on buttons and portfolio items.
+  - Expandable gallery with Pinterest-style layout.
+  - Smooth scroll for navigation links.
+- **SEO-friendly** structure with semantic HTML tags.
+- **Vercel deployment** for fast performance and automatic HTTPS.
+
+
+## ⚙️ Tech Stack
+
+- **Frontend**: React, Tailwind CSS, Framer Motion (animations)
+- **Hosting**: Vercel
+- **Icons**: Lucide React
+- **Fonts**: Apple system font stack for headings and Inter for body (customizable)
+
+---
+
+## 🛠 Setup & Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+```
+2. Install dependencies:
+
+```bash
+npm install
+```
+3. Run locally:
+
+```bash
+npm start
+```
+4. Build for production:
+```bash
+npm run build
+```
+
+## 🚀 Deployment
+The project is deployed on Vercel:
+```bash
+vercel
+Vercel automatically detects React projects and serves the build folder.
+Each push to the main branch triggers an automatic deployment.
+```
+
+## 📝 Notes
+Update the resumePDF and asset images in src/assets as needed.
+
+Update navigation links in Navbar.jsx if you add/remove sections.
+
+Font settings can be modified in tailwind.config.js or globals.css.
+
+## 📄 License
+This project is open-source and free to use under the MIT License.
+
